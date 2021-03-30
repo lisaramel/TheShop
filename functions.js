@@ -37,7 +37,7 @@ function productCard() {
     <div class="infoContainer">
       <img src="${product.image}" alt="" />
       <div class="overlay">
-        <div class="text">${product.description}</div>
+        <div class="text">DESCRIPTION <br> ${product.description}</div>
       </div>
     </div>
     <span id="productText" style="text-align: center;">

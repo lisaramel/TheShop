@@ -194,7 +194,7 @@ a:active {
 
 .second-image {
   background-image: url("images/fabric-image.png");
-  height: 1500px;
+  height: 1600px;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -368,17 +368,18 @@ input.validAlert {
   font-family: "Lato", sans-serif;
   color: rgb(142, 194, 230);
   font-size: 12px;
-  width: 250px;
+  width: 180px;
   height: 330px;
   padding: 1em;
-  text-align: center;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
 }
 
 .productCards{
 margin: auto;
 width: 70%;
 text-align: center;
-margin-top: 5em;
+margin-top: 3em;
 }
 
 .productTitle {

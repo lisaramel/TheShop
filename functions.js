@@ -40,7 +40,7 @@ function productCard() {
         <div class="text">${product.description}</div>
       </div>
     </div>
-    <span id="productText">
+    <span id="productText" style="text-align: center;">
     <h3 id="productTitle" class="productTitle">${product.title}</h3>
     <p style="font-weight: 500">$${product.price}</p>
     <button id="${index}" class="buyButton">buy</button>

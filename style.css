@@ -228,8 +228,10 @@ a:active {
   padding: 20px;
   border: 1px solid #888;
   width: 60%;
+  height: 100%;
   opacity: 80%;
   border-radius: 10px;
+
 }
 
 .close:hover,

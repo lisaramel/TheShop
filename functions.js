@@ -77,6 +77,7 @@ function addToCart() {
   let output = `<table id="cartItem">`;
 
   Object.keys(localStorage).forEach((key) => {
+    
     const image = JSON.parse(localStorage.getItem(key)).image;
     const title = JSON.parse(localStorage.getItem(key)).title;
     const quantity = JSON.parse(localStorage.getItem(key)).amount;
@@ -94,6 +95,14 @@ function addToCart() {
         </tr>
         `;
     document.querySelector(".cart").innerHTML = output;
+  });
+}
+function checkChange(){
+  window.addEventListener("storage", function () {
+    Object.keys(localStorage).forEach((key) => {
+    JSON.parse(localStorage.getItem(e.key)).amount;
+    JSON.parse(localStorage.getItem(e.key)).quantityPrice;
+    });
   });
 }
 
@@ -120,6 +129,7 @@ function getQuantityButtons() {
       getProduct.amount = amount + 1;
       localStorage.setItem(getProduct.id, JSON.stringify(getProduct));
       quantityPrice(getProduct.id, id);
+      window.location.reload();
     })
   );
 
@@ -136,6 +146,7 @@ function getQuantityButtons() {
       } else {
         localStorage.removeItem(id);
       }
+      window.location.reload();
     })
   );
 }
@@ -170,6 +181,7 @@ function order() {
   $("#orderBtn").on("click", function () {
     if ($("#contactForm").valid()) {
       $("#contactForm").css({ display: "none" });
+      $(".formHeader").css({ "padding-top": "5em" });
       $(".formHeader").html("Thank you for <br> your order!");
       localStorage.clear();
     }

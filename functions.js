@@ -97,14 +97,6 @@ function addToCart() {
     document.querySelector(".cart").innerHTML = output;
   });
 }
-function checkChange(){
-  window.addEventListener("storage", function () {
-    Object.keys(localStorage).forEach((key) => {
-    JSON.parse(localStorage.getItem(e.key)).amount;
-    JSON.parse(localStorage.getItem(e.key)).quantityPrice;
-    });
-  });
-}
 
 function quantityPrice(product, id) {
   let price = JSON.parse(localStorage.getItem(product)).price;
@@ -181,7 +173,6 @@ function order() {
   $("#orderBtn").on("click", function () {
     if ($("#contactForm").valid()) {
       $("#contactForm").css({ display: "none" });
-      $(".formHeader").css({ "padding-top": "5em" });
       $(".formHeader").html("Thank you for <br> your order!");
       localStorage.clear();
     }
